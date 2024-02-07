@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+</head>
+<body>
+    <h1>Cadastrar</h1>
+    <form method="post" action="/register">
+        <label for="username">Nome:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required><br>
+        <label for="confirm">Confirmar senha:</label>
+        <input type="password" id="confirm" name="confirm" required><br>
+        <label for="accesslevel">Nivel de Acesso:</label>
+        <select name="accesslevel" id="accesslevel">
+            <option value="1">Administrador</option>
+            <option value="2">Cliente</option>
+            <option value="3">Usuário</option>
+        </select><br>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

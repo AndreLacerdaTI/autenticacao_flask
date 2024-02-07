@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if alterar_senha %}
+        <form method="post" action="/salvar_nova_senha">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" value="{{user.id}}" readonly><br>
+            <label for="password_old">Senha antiga:</label>
+            <input type="password" id="password_old" name="password_old" required><br>
+            <label for="password_new">Senha nova:</label>
+            <input type="password" id="password_new" name="password_new" required><br>
+            <label for="confirm">Confirmar senha:</label>
+            <input type="password" id="confirm" name="confirm" required><br>
+            <button type="submit">Salvar</button>
+        </form>
+    {% elif user %}
+        <form method="post" action="/alterar_senha">
+            <button>Alterar senha</button>
+        </form>
+        <a href="{{ url_for('logout') }}">Logout</a>
+        <p>{{user.id}}</p>
+        <p>{{user.username}}</p>
+        <p>{{user.password}}</p>
+        <p>{{user.name}}</p>
+        <p>{{user.accesslevel}}</p>
+    {% endif %}
+</body>
+</html>

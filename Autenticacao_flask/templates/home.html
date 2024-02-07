@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body onload="startTimer()">
+    <a href="{{ url_for('profile') }}">Perfil</a>
+    <div class="container">
+        <div id="timer">00:30:00</div>
+        <button id="startBtn" onclick="startTimer()">Iniciar</button>
+        <button id="stopBtn" onclick="stopTimer()">Parar</button>
+        <button id="resetBtn" onclick="resetTimer()">Reiniciar</button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
