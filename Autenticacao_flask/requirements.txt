@@ -1,4 +1,4 @@
 Flask
-SQLAlchemy
-flask_login
+Flask-SQLAlchemy
+Flask-Login
 Werkzeug
